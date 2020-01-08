@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lESSON1 Function sum()</title>
+</head>
+
+<body>
+    <!-- <script src="script.js"></script> -->
+    <script>
+        function sum(arg) {
+            let resultSum = arg;
+
+            function newSum(newArg) {
+                (newArg === undefined) ? resultSum : resultSum += newArg;
+                return newSum;
+            }
+
+            newSum.toString = function () {
+                return resultSum;
+            }
+
+            return newSum;
+        }
+        alert(`Результат вычисления sum(1)(2)(3)(10)() = ${sum(1)(2)(3)(10)()}`);
+    </script>
+</body>
+
+</html>
